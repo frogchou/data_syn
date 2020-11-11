@@ -14,7 +14,6 @@ echo.
 set dt=%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%
 set "dt=%dt: =0%"
 
-echo "开始备份" >> e:\bak2me.log
-rsync.exe --port=8873 -vzaP /cygdrive/e/bat root@yourIP::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
-rsync.exe --port=8873 -vzaP /cygdrive/e/frogchou root@yourIP::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
-echo "备份结束" >> e:\bak2me.log
+echo "开始备份" >> g:\bak2me.log
+G:\work\cwRsync_5.5.0_x86_Free\bin\rsync.exe --port=873 -vzaP /cygdrive/g/work root@i.frogchou.com::server/ --password-file=/cygdrive/g/work/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> g:\bak2me.log
+echo "备份结束" >> g:\bak2me.log
