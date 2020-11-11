@@ -16,4 +16,4 @@ cp ${current_path}/rsyncd/* /etc/rsyncd/
 chmod 600 /etc/rsyncd/rsyncd.secrets
 echo "install over"
 echo "change /etc/rsyncd/rsyncd.conf to your self"
-echo "run commad 'rsync -daemon --config=/etc/rsyncd/rsyncd.conf' to start service"
+echo "run commad 'rsync --daemon --config=/etc/rsyncd/rsyncd.conf' to start service"
