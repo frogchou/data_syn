@@ -1,20 +1,20 @@
 echo off
 echo ###################################################
-echo 	Ê¹ÓÃ rsync ½«Ö¸¶¨ÎÄ¼þ¼Ð±¸·Ýµ½ÔÆ¶Ë
-echo	²ÎÊýËµÃ÷£º
-echo	-b, --backup ´´½¨±¸·Ý£¬¶ÔÒÑ´æÔÚÎÄ¼þÖØÃüÃûÒÔ±¸·Ý
-echo 	--suffix=SUFFIX ¶¨Òå±¸·ÝÎÄ¼þÇ°×º
-echo	--backup-dir ½«±¸·ÝÎÄ¼þ´æ·ÅÔÚÔÚÄ¿Â¼ÏÂ¡£
-echo	--portÖ¸¶¨·þÎñÆ÷¶Ë¿Ú
-echo	--password-fileÖ¸¶¨ÃÜÂëÎÄ¼þ
-echo	-vzaP Ñ¹Ëõ²¢ÏÔÊ¾½ø³Ì
-echo	--delete ±£³Ö¿Í»§¶ËºÍ·þÎñÆ÷¶ËÒ»ÖÂ
+echo 	ä½¿ç”¨ rsync å°†æŒ‡å®šæ–‡ä»¶å¤¹å¤‡ä»½åˆ°äº‘ç«¯
+echo	å‚æ•°è¯´æ˜Žï¼š
+echo	-b, --backup åˆ›å»ºå¤‡ä»½ï¼Œå¯¹å·²å­˜åœ¨æ–‡ä»¶é‡å‘½åä»¥å¤‡ä»½
+echo 	--suffix=SUFFIX å®šä¹‰å¤‡ä»½æ–‡ä»¶å‰ç¼€
+echo	--backup-dir å°†å¤‡ä»½æ–‡ä»¶å­˜æ”¾åœ¨åœ¨ç›®å½•ä¸‹ã€‚
+echo	--portæŒ‡å®šæœåŠ¡å™¨ç«¯å£
+echo	--password-fileæŒ‡å®šå¯†ç æ–‡ä»¶
+echo	-vzaP åŽ‹ç¼©å¹¶æ˜¾ç¤ºè¿›ç¨‹
+echo	--delete ä¿æŒå®¢æˆ·ç«¯å’ŒæœåŠ¡å™¨ç«¯ä¸€è‡´
 echo ###################################################
 echo.
 set dt=%date:~0,4%%date:~5,2%%date:~8,2%%time:~0,2%%time:~3,2%%time:~6,2%
 set "dt=%dt: =0%"
 
-echo "¿ªÊ¼±¸·Ý" >> e:\bak2me.log
-rsync.exe --port=8873 -vzaP /cygdrive/e/bat root@i.frogchou.com::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
-rsync.exe --port=8873 -vzaP /cygdrive/e/frogchou root@i.frogchou.com::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
-echo "±¸·Ý½áÊø" >> e:\bak2me.log
+echo "å¼€å§‹å¤‡ä»½" >> e:\bak2me.log
+rsync.exe --port=8873 -vzaP /cygdrive/e/bat root@yourIP::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
+rsync.exe --port=8873 -vzaP /cygdrive/e/frogchou root@yourIP::server/ --password-file=/cygdrive/e/cwRsync_5.5.0_x86_Free/rsync.pass -b --backup-dir='historyfile/%dt%/' --delete >> e:\bak2me.log
+echo "å¤‡ä»½ç»“æŸ" >> e:\bak2me.log
