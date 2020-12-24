@@ -4,4 +4,4 @@
 ### 2、安装windows客户端
 #### windows 可编辑调整bak2me.bat 文件，将该文件加入到任务计划程序定时执行备份。在此之前下载 cwRsync_5.5.0_x86_Free 并将bin目录加入到环境变量，如果不想加入到环境变量，可以在bak2me.bat脚本中写全rsync.exe的路径。
 ### 注意
-#### 主要cwRsync中磁盘的写法，需要写成/cygdrive/g （代表G盘）
+#### 主要cwRsync中磁盘的写法，需要写成/cygdrive/g （代表G盘）.
